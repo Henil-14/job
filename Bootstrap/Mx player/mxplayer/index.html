@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Mx Player</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid ">
+        <img src="https://cdn-images-1.medium.com/max/658/1*iNEpDcRzLYWrlwU-gR3bWw@2x.png" alt="mxplayer" height="60" >
+        <form class="d-flex ">
+          <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        
+        <a href="Login" class="text-light text-decoration-none"><h4>LOGIN</h4></a>
+      </div>
+    </nav>
+    <!-- Nav tabs -->
+    <ul class="nav navbar-expand-lg nav-tabs bg-dark d-flex justify-content-evenly" id="myTab" role="tablist ">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="Home-tab" data-bs-toggle="tab" data-bs-target="#Home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="bi bi-house"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Show-tab" data-bs-toggle="tab" data-bs-target="#Shows" type="button" role="tab" aria-controls="Shows" aria-selected="true">Shows</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Movies-tab" data-bs-toggle="tab" data-bs-target="#Movies" type="button" role="tab" aria-controls="Movies" aria-selected="false">Movies</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Free-tab" data-bs-toggle="tab" data-bs-target="#Free" type="button" role="tab" aria-controls="Free" aria-selected="false">New&Free</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="MXGold-tab" data-bs-toggle="tab" data-bs-target="#MXGold" type="button" role="tab" aria-controls="MXGold" aria-selected="false">MX Gold</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="MXVDESI-tab" data-bs-toggle ="tab" data-bs-target="#MXVDESI" type="button" role="tab" aria-controls="MXVDESI" aria-selected="false">MX VDESI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Podcast-tab" data-bs-toggle="tab" data-bs-target="#Podcast" type="button" role="tab" aria-controls="Podcast" aria-selected="false">Podcast</button>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content bg-dark text-light P-5">
+      <div class="tab-pane active" id="Home" role="tabpanel" aria-labelledby="Home-tab"> 
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner p-1 "  >
+            <div class="carousel-item active" data-bs-interval="10000">
+              
+              <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV-RX1-hZGOfjBVjCXe5c_rq-gdyzXd4xFpO6SCElofQ&usqp=CAU&ec=48600112" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHRPLacmrArTg9AKPWFbn8tAH3ZpMP47RhEzudv-0hA&usqp=CAU&ec=48600112" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFRhMTWHlIXTP3ft-Rg1qF4qzgpPjJKJO-TNWNC-VFw&usqp=CAU&ec=48600112" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Movie_poster_for_%22Scary_Movie%22.jpg" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiiEjp01OCEW1hWoORE-XvUGE_h64qPE7zYnR4N8ufQQ&usqp=CAU&ec=48600112" class="d-block w-100" alt="Movie"  height="800">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+         
+          <!--Movies-->
+          <div class="container-fluid">
+            <div class="row align-items-start ">
+              <h3 class="display-6"><strong>Trending Movies</strong><i class="bi bi-chevron-compact-right"></i></h3>
+              
+              <div class="col">
+                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9kbxcMc7cct2ucWWRtO5JugJZzWnZFaqG4A9QsKEJWX7NGwYpcFJmHfPvcwe9K7oswD8Q24t20ko&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUK4MVmjZSnpslETEUMMOvpNlydlKJ-8_SZoAT2Ipp2OTmtlsmSbQ7cgV-mLjfmYa1mcUlYNu4IpM&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7cwm-J8quujZgOEcvZsGfxNWVEhnN0BWoDOf0f1zXA&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+                
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+              </div>
+              
+              
+            </div>
+        </div>
+        <!--Shows-->
+        <div class="container-fluid">
+          <div class="row align-items-start ">
+            <h3 class="display-6"><strong>Shows</strong><i class="bi bi-chevron-compact-right"></i></h3>
+            
+            <div class="col">
+              
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9kbxcMc7cct2ucWWRtO5JugJZzWnZFaqG4A9QsKEJWX7NGwYpcFJmHfPvcwe9K7oswD8Q24t20ko&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUK4MVmjZSnpslETEUMMOvpNlydlKJ-8_SZoAT2Ipp2OTmtlsmSbQ7cgV-mLjfmYa1mcUlYNu4IpM&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7cwm-J8quujZgOEcvZsGfxNWVEhnN0BWoDOf0f1zXA&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+              
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            <div class="col">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+            </div>
+            
+            
+          </div>
+      </div>
+      <!--MX original web series-->
+      <div class="container-fluid">
+        <div class="row align-items-start ">
+          <h3 class="display-6"><strong>MX original web series</strong><i class="bi bi-chevron-compact-right"></i></h3>
+          
+          <div class="col">
+            
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9kbxcMc7cct2ucWWRtO5JugJZzWnZFaqG4A9QsKEJWX7NGwYpcFJmHfPvcwe9K7oswD8Q24t20ko&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUK4MVmjZSnpslETEUMMOvpNlydlKJ-8_SZoAT2Ipp2OTmtlsmSbQ7cgV-mLjfmYa1mcUlYNu4IpM&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7cwm-J8quujZgOEcvZsGfxNWVEhnN0BWoDOf0f1zXA&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+            
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+          </div>
+          
+          
+        </div>
+    </div>
+    <!--Top 10-->
+    <div class="container-fluid">
+      <div class="row align-items-start ">
+        <h3 class="display-6"><strong>Top ten this week</strong><i class="bi bi-chevron-compact-right"></i></h3>
+        
+        <div class="col">
+          
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9kbxcMc7cct2ucWWRtO5JugJZzWnZFaqG4A9QsKEJWX7NGwYpcFJmHfPvcwe9K7oswD8Q24t20ko&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhK0gWU3RLcsG4WpL7_wBjlxS6zHstS0ajsNjfw95qw&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUK4MVmjZSnpslETEUMMOvpNlydlKJ-8_SZoAT2Ipp2OTmtlsmSbQ7cgV-mLjfmYa1mcUlYNu4IpM&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7jCoxfgh0ZirKeQtIGJ43pyFYZzpBlG7D6LnoVONVg&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        <div class="col">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jPl95U8oyegqXiOLGm4o0sk1-eZqzEhMYgGwOfeIJQ&usqp=CAU&ec=48600112" alt="image" width="100">
+        </div>
+        
+      </div>
+  </div>
+      </div>
+     <!--  <div class="tab-pane" id="Shows" role="tabpanel" aria-labelledby="Shows-tab"> 
+        SHOW
+         </div>
+     <div class="tab-pane" id="Movies" role="tabpanel" aria-labelledby="Movies-tab"> Movies </div>
+      <div class="tab-pane" id="Free" role="tabpanel" aria-labelledby="Free-tab"> New&Free </div>
+      <div class="tab-pane" id="MXGold" role="tabpanel" aria-labelledby="MXGold-tab"> MX Gold </div>
+      <div class="tab-pane" id="MXVDESI" role="tabpanel" aria-labelledby="MXVDESI-tab"> MX VDESI </div>
+      <div class="tab-pane" id="Podcast" role="tabpanel" aria-labelledby="Podcast-tab"> Podcast </div>  -->
+    </div>
+  </header>
+  <main>
+    
+  </main>
+  <footer>
+    <!-- place footer here -->
+    <section class="">
+      <!-- Footer -->
+      <footer class="bg-secondary text-white text-center text-md-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <img src="https://cdn-images-1.medium.com/max/658/1*iNEpDcRzLYWrlwU-gR3bWw@2x.png" alt="mxplayer" width="150">
+    
+              <p>
+                MX player is your one step destination for all your entertaintment such as latest movies , most popular web shows, Live tv channels , newly released songs etc.
+              </p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Company</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">About Us</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">Careers</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">Contact US</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none" >FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0">Legal</h5>
+    
+              <ul class="list-unstyled ">
+                <li>
+                  <a href="#!" class="text-white text-decoration-none" >Download apps</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">Tearms and services</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white text-decoration-none">Complience Report</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+           Copyright© 2022 MX Media & Entertaitments. All rights reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </section>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
