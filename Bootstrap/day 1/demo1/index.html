@@ -3,6 +3,57 @@
 
 <head>
   <title>Demo1</title>
+
+  <style>
+    @media (min-width:576px) {
+      body{
+        background:red;
+      }
+
+    }
+    @media (min-width:768px) {
+      body{
+        background:green;
+      }
+}
+@media (min-width:992px) {
+  body{
+        background:blue;
+      }
+
+}
+@media (min-width:1200px ) {
+  body{
+        background:violet;
+      }
+
+}
+
+@media (max-width:575px) {
+      body{
+        background:red;
+      }
+
+    }
+    @media (max-width:767px) {
+      body{
+        background:green;
+      }
+}
+@media (max-width:991px) {
+  body{
+        background:blue;
+      }
+
+}
+@media (max-width:1199px ) {
+  body{
+        background:violet;
+      }
+
+}
+
+  </style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +65,7 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    
   </header>
   <main>
     <!--Heading-->
@@ -68,19 +119,234 @@
         <li class="list-inline-item">helllo there</li>
       </ul>
 
+      <!--text justify-->
+      <h1>Text Justify</h1>
+      <P class="text-justify">Because the effects of executive coaching extend beyond the individual client to the whole organization, the work is a good fit for those who aspire to have a broad societal impact.
+
+        Kilburg (1996) defines executive coaching as “a helping relationship between a client who has managerial authority and responsibility in an organization and a consultant.”
+        
+        The consultant or executive coach uses their expertise to help clients achieve goals, improve their professional performance and personal satisfaction, and consequently improve the effectiveness of the organization as a whole.
+        
+        Individuals come to this work from a wide variety of educational and professional backgrounds. This article will explain who executive coaches are, what they do, and how you can become one yourself.</P>
 
       <!--text alignment-->
 
-      <!--justify-->
-
       <p class="text-left">Text align left</p>
-      <p class="text-right">Text align right</p>
-
-        p>
-
+      <p class="text-end">Text align right</p>
+        <p class="text-center">Text align center</p>
 
 
-    </main>
+        <!--Responsive alignment-->
+
+        <H1 class="display-2">Responsive ALIGNMENT</H1>
+
+        <h3 class="display-4"> text aligh right</h3><br>
+        <p class="text-sm-end ">Text align right in small or large</p>
+        <p class="text-md-end">Text align right on medium or large</p>
+          <p class="text-lg-end" >Right on larger or larger</p>
+          <p class="text-xl-end">right on xl or larger</p>
+
+          <h3 class="display-4"> text aligh left</h3><br>
+          <p class="text-sm-left ">Text align left in small or large</p>
+          <p class="text-md left">Text align right on medium or large</p>
+            <p class="text-lg-left" >Right on larger or larger</p>
+            <p class="text-xl-left">center on xl or larger</p>
+
+            <h3 class="display-4"> text aligh center</h3><br>
+            <p class="text-sm-center ">Text align left in small or large</p>
+            <p class="text-md-center">Text align right on medium or large</p>
+              <p class="text-lg-center" >Right on larger or larger</p>
+              <p class="text-xl-center">center on xl or larger</p>
+
+              <!--Turn block to inline-->
+
+              <P class="display-3">block inline</P>
+
+              <h1 class="d-inline bg-danger">HEllo</h1>
+              <h2 class="d-inline bg-success">How are you</h2><br><br>
+
+              <!--inline block-->
+              <span class=" d-block bg-success">inline block</span><br><br>
+
+              <div class=" d-inline-block bg-dark text-light">
+                <h2>Hello there</h2>
+                <p>this is inline</p>
+              </div>
+              <div class=" d-inline-block bg-dark text-light">
+                <h2>Hello there</h2>
+                <p>this is  inline</p><br><br>
+              </div>
+
+              <!--Float Positions-->
+              <h1>Float-Position</h1><br>
+              <div class="float-left">Float Left</div>
+              <div class="float-end">float right</div>
+              <div class="float-none">float none</div>
+
+              <!--Responsive float-->
+              <h4 class="display-2">Responsive float</h4>
+
+               <div class="float-sm-end">Float right on small</div><br>
+               <div class="float-md-end">Float Right on medium</div><br>
+               <div class="float-lg-end">Float right on large</div><br>
+               <div class="float-xl-end">Float right on extra large</div><br>
+
+               
+               <div class="float-sm-left">Float left on small</div><br>
+               <div class="float-md-left">Float left on medium</div><br>
+               <div class="float-lg-left">Float left on large</div><br>
+               <div class="float-xl-left">Float left on extra large</div><br>
+
+               
+               <div class="float-sm-none">Float none on small</div><br>
+               <div class="float-md-none">Float none on medium</div><br>
+               <div class="float-lg-none">Float none on large</div><br>
+               <div class="float-xl-none">Float none on extra large</div><br><br>
+
+               <!--Clerfix-->
+               <h1>Clerfix</h1>
+               <div class="bg-danger clearfix">
+                <button class="float-left"> Float left</button>
+                <button class="float-end"> Float right</button>
+               </div>
+
+
+               <!--Fixed stickey-->
+
+               <h3 class="fixed-top">Stickey top</h3>
+
+               <P> A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get the writing started so that when the writer goes onto their day's writing projects, words are already flowing from their fingers.Another writing challenge can be to take the individual sentences in the random paragraph and incorporate a single sentence from that into a new paragraph to create a short story. Unlike the random sentence generator, the sentences from the random paragraph will have some connection to one another so it will be a bit different. You also won't know exactly how many sentences will appear in the random paragraph.
+
+                Programmers
+                It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a project where blocks of text are needed, this tool can be a great way to get that. It's a good way to test your programming and that the tool being created is working well.
+                
+                Above are a few examples of how the random paragraph generator can be beneficial. The best way to see if this random paragraph picker will be useful for your intended purposes is to give it a try. Generate a number of paragraphs to see if they are beneficial to your current project.
+                
+                If you do find this paragraph tool useful, please do us a favor and let us know how you're using it. It's greatly beneficial for us to know the different ways this tool is being used so we can improve it with updates. This is especially true since there are times when the generators we create get used in completely unanticipated ways from when we initially created them. If you have the time, please send us a quick note on what you'd like to see changed or added to make it better in the future.Another writing challenge can be to take the individual sentences in the random paragraph and incorporate a single sentence from that into a new paragraph to create a short story. Unlike the random sentence generator, the sentences from the random paragraph will have some connection to one another so it will be a bit different. You also won't know exactly how many sentences will appear in the random paragraph.
+
+                Programmers
+                It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a project where blocks of text are needed, this tool can be a great way to get that. It's a good way to test your programming and that the tool being created is working well.
+                
+                Above are a few examples of how the random paragraph generator can be beneficial. The best way to see if this random paragraph picker will be useful for your intended purposes is to give it a try. Generate a number of paragraphs to see if they are beneficial to your current project.
+                
+                If you do find this paragraph tool useful, please do us a favor and let us know how you're using it. It's greatly beneficial for us to know the different ways this tool is being used so we can improve it with updates. This is especially true since there are times when the generators we create get used in completely unanticipated ways from when we initially created them. If you have the time, please send us a quick note on what you'd like to see changed or added to make it better in the future.Another writing challenge can be to take the individual sentences in the random paragraph and incorporate a single sentence from that into a new paragraph to create a short story. Unlike the random sentence generator, the sentences from the random paragraph will have some connection to one another so it will be a bit different. You also won't know exactly how many sentences will appear in the random paragraph.
+
+                Programmers
+                It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a project where blocks of text are needed, this tool can be a great way to get that. It's a good way to test your programming and that the tool being created is working well.
+                
+                Above are a few examples of how the random paragraph generator can be beneficial. The best way to see if this random paragraph picker will be useful for your intended purposes is to give it a try. Generate a number of paragraphs to see if they are beneficial to your current project.
+                
+                If you do find this paragraph tool useful, please do us a favor and let us know how you're using it. It's greatly beneficial for us to know the different ways this tool is being used so we can improve it with updates. This is especially true since there are times when the generators we create get used in completely unanticipated ways from when we initially created them. If you have the time, please send us a quick note on what you'd like to see changed or added to make it better in the future.</P>
+
+
+                <h3 class="fixed-bottom">Stickey top</h3>
+
+
+                <!-- text colors-->
+
+                <P class="text-primary">Primary</P>
+                <p class="text-secondary">secondary</p>
+                <p class="text-success">sucess</p>
+                <p class="text-info">info</p>
+                <p class="text-warning">warning</p>
+                <p class="text-danger">danger</p>
+                <P class="text-light">light</P>
+                <p class="text-dark">dark</p>
+                <p class="text-white">white</p>
+
+                
+                <!-- background colors-->
+
+                <P class="bg-primary">Primary</P>
+                <p class="bg-secondary">secondary</p>
+                <p class="bg-success">sucess</p>
+                <p class="bg-info">info</p>
+                <p class="bg-warning">warning</p>
+                <p class="bg-danger">danger</p>
+                <P class="bg-light">light</P>
+                <p class="bg-dark text-danger">dark</p>
+                <p class="bg-white text-success">white</p>
+
+                <!--Margin-->
+
+                
+                <P class="bg-primary mb-0">Margin bottom 0</P>
+                <p class="bg-secondary mb-1">Margin bottom 1</p>
+                <p class="bg-success mb-2">Margin bottom 2</p>
+                <p class="bg-info mb-3">Margin bottom 3</p>
+                <p class="bg-warning mb-4">Margin bottom 4</p>
+                <P class="bg-primary mb-5">Margin bottom 5</P>
+
+                <P class="bg-primary mt-0">Margin top 0</P>
+                <p class="bg-secondary mt-1">Margin top 1</p>
+                <p class="bg-success mt-2">Margin top 2</p>
+                <p class="bg-info mt-3">Margin top 3</p>
+                <p class="bg-warning mt-4">Margin top 4</p>
+                <P class="bg-primary mt-5">Margin top 5</P>
+
+
+                <P class="bg-primary m-5">Margin</P>
+                <P class="bg-primary mx-5">Margin</P>
+                <P class="bg-primary my-5">Margin</P>
+                
+
+                 <!--Padding-->
+
+                
+                 <P class="bg-primary pb-0">padding bottom 0</P>
+                 <p class="bg-secondary pb-1">padding bottom 1</p>
+                 <p class="bg-success pb-2">padding bottom 2</p>
+                 <p class="bg-info pb-3">padding bottom 3</p>
+                 <p class="bg-warning pb-4">padding bottom 4</p>
+                 <P class="bg-primary pb-5">padding bottom 5</P>
+ 
+                 <P class="bg-primary pt-0">padding top 0</P>
+                 <p class="bg-secondary pt-1">padding top 1</p>
+                 <p class="bg-success pt-2">padding top 2</p>
+                 <p class="bg-info pt-3">padding top 3</p>
+                 <p class="bg-warning pt-4">padding top 4</p>
+                 <P class="bg-primary pt-5">padding top 5</P>
+
+                 <P class="bg-primary p-5">padding</P>
+                 <P class="bg-primary px-5">padding</P>
+                 <P class="bg-primary py-5">padding</P>
+
+                 <!--sizing-->
+
+                 <!--width-->
+
+                 <h1>Width  </h1><br>
+
+                 <div class="bg-success p-4 w-25">width 25%</div>
+                 <div class="bg-success p-4 w-50">width 50%</div>
+                 <div class="bg-success p-4 w-75">width 75%</div>
+                 <div class="bg-success  p-4 w-100">width 100%</div> <br><br>
+
+
+                 <!--Height-->
+
+                 <div style="height: 300px; border: 1px solid #333;">
+                  <div class="bg-primary d-inline-block h-25">Height 25%</div>
+                  <div class="bg-primary d-inline-block h-50">Height 50%</div>
+                  <div class="bg-primary d-inline-block h-75">Height 75%</div>
+                  <div class="bg-primary d-inline-block h-100">Height 100%</div>
+                 </div><br>
+
+
+                 <!--Border-->
+                 <div class="p-3 mb-2 bg-light border"> Regular</div>
+                 <div class="p-3 mb-2 bg-light border border-primary rounded"> Primary</div>
+                 <div class="p-3 mb-2 bg-light border border-success rounded-top"> success</div>
+                 <div class="p-3 mb-2 bg-light border border-info"> info</div>
+                 <div class="p-3 mb-2 bg-light border border-warning"> warning</div>
+                 <div class="p-3 mb-2 bg-light border border-danger border-bottom-0"> danger</div>
+                 <div class="p-3 mb-2 bg-light border border-light"> light</div>
+                 <div class="p-3 mb-2 bg-light border border-dark"> dark</div>
+                 <div class="p-3 mb-2 bg-light border border-white"> White</div>
+                 
+                 
+                 
+                </main>
   <footer class="blockquote-footer"> Hello
     <!-- place footer here -->
     
